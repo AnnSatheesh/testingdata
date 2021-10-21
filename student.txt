@@ -1,0 +1,32 @@
+
+class Student{  
+   int rollno;//instance variable  
+   String name;  
+   static String college ="ITS"; 
+     
+   Student(int r, String n){  
+   rollno = r;  
+   name = n;  
+   }  
+     
+   void display (){System.out.println(rollno+" "+name+" "+college);}  
+}  
+  
+public class TestStaticVariable1{  
+ public static void main(String args[]){  
+ Student s1 = new Student(11,"Joel");  
+ Student s2 = new Student(22,"Arya");  
+ Student s3 = new Student(33,"Allie");  
+ Student s4 = new Student(44,"Mary");  
+ Student s5 = new Student(55,"Jeev");  
+ 
+ 
+ s1.display(); 
+ s2.display(); 
+ s3.display(); 
+ s4.display();  
+s5.display(); 
+
+ }  
+}  
+class Counter2{  From 191798-Mathew koshy to Everyone:  10:12 AM123From Sumita Pandey Trainer to Everyone:  10:15 AM//Java Program to demonstrate the use of a static method.  class Student{       int rollno;       String name;       static String college = "ITS";       //static method to change the value of static variable       	 static void change(){       college = "BBDIT";       }       //constructor to initialize the variable       	 Student(int r, String n){       rollno = r;       name = n;       }       //method to display values      	void display(){System.out.println(rollno+" "+name+" "+college);}  }  //Test class to create and display the values of object  public class TestStaticMethod{      public static void main(String args[])	{      Student.change();//calling change method      //creating objects      Student s1 = new Student(111,"Karan");      Student s2 = new Student(222,"Aryan");      Student s3 = new Student(333,"Sonoo");      //calling display method      s1.display();      s2.display();      s3.display();      }  }From 191798-Mathew koshy to Everyone:  10:18 AM111 Karan BBDIT222 Aryan BBDIT333 Sonoo BBDITFrom Sumita Pandey Trainer to Everyone:  10:40 AMclass A{  A(){System.out.println("hello a");A(int x){  this();  System.out.println(x);  }  }  class TestThis5{  public static void main(String args[]){  A a=new A(10);  }}From 191798-Mathew koshy to Everyone:  10:41 AMNo "public class" found to executeFrom Sumita Pandey Trainer to Everyone:  11:45 AMimport java.io.*;class Vehicle {	void run() {		System.out.println("Vehicle is running");	}}class Bike2 extends Vehicle {	void run() {		System.out.println("Bike is running safely");	}	public static void main(String args[]) {		// Bike2 obj = new Bike2();		Vehicle vh = new Vehicle();		// obj.run();		vh.run();	}}From 191798-Mathew koshy to Everyone:  11:53 AMVehicle is runninghttps://www.jdoodle.com/online-java-compiler/class Address {  String city,state,country;    public Address(String city, String state, String country) {      this.city = city;      this.state = state;      this.country = country;  public class Emp {  int id;  String name;  Address address;    public Emp(int id, String name,Address address) {      this.id = id;      this.name = name;      this.address=address;  }    void display(){  System.out.println(id+" "+name);  System.out.println(address.city+" "+address.state+" "+address.country);  }    public static void main(String[] args) {  Address address1=new Address("gzb","UP","india");  Address address2=new Address("gno","UP","india");    Emp e=new Emp(111,"varun",address1);  Emp e2=new Emp(112,"arun",address2);        e.display();  e2.display();        }  }
